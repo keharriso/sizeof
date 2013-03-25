@@ -1,0 +1,12 @@
+sizeof - a tiny tool for calculating the sizes of files and folders
+
+	sizeof [-bfisBFIS] FILE ...
+
+	Options (capitalize to negate):
+	b - print bytes (no K, M, G, or T)
+	f - print file name (default)
+	i - print with base 2 units (default)
+	s - sum all sizes together
+
+Instead of calculating disk usage like du, sizeof only measures file length.
+You'll need the %llu format directive and a few POSIX functions to use sizeof.
