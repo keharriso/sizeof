@@ -129,19 +129,19 @@ static void format_size(void) {
 }
 
 void print_size(void) {
-	if (!s) {
+	if (f && !s) {
 		if (b) {
-			printf("% 16d", (int) size);
+			printf("%14llu", (long long unsigned) size);
 		} else if (unit) {
-			printf("% 6.02f", (float) size);
+			printf("%8.02f", size);
 		} else {
-			printf("% 6d", (int) size);
+			printf("%8llu", (long long unsigned) size);
 		}
 	} else {
 		if (b || !unit) {
-			printf("%d", (int) size);
+			printf("%llu", (long long unsigned) size);
 		} else {
-			printf("%.02f", (float) size);
+			printf("%.02f", size);
 		}
 	}
 
